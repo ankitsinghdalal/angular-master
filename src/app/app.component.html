@@ -1,0 +1,15 @@
+<app-material-preloader></app-material-preloader>
+<app-loader-bg></app-loader-bg>
+<app-loader></app-loader>
+<div class="mn-content fixed-sidebar" [class.fixed-sidebar-on-hidden]="isSlidebarCollasped">
+    <app-header></app-header>
+    <app-search-results></app-search-results>
+    <app-chat-sidebar [isChatSlidebarCollasped]="isChatSlidebarCollasped"></app-chat-sidebar>
+    <app-chat-messages></app-chat-messages>
+    <app-sidebar [isSlidebarCollasped]="isSlidebarCollasped"></app-sidebar>
+    <main class="mn-inner inner-active-sidebar" [class.hidden-fixed-sidebar]="isSlidebarCollasped">
+        <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+</div>
+<app-sidebar-hover></app-sidebar-hover>
